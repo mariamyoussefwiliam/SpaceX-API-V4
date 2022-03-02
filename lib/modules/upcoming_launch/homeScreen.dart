@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
             child: ConditionalBuilder(
               condition: cubit.launchesModel != null,
               builder: (context) {
-                timer = Timer.periodic(const Duration(minutes: 1), (timer) {
+                timer = Timer.periodic(const Duration(seconds: 1), (timer) {
                   var diff = cubit.launchesModel!.dateUtc!
                       .difference(DateTime.now().toUtc());
                   cubit.countTime(diff);
